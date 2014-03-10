@@ -3,3 +3,7 @@
 <% Post.all.each do |post|  %>
   <p><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
 <% end %>
+
+<% if user_signed_in? %>
+ <p><a href="/posts/create">Create New Post</a></p>
+<% end %>

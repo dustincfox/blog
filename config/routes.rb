@@ -9,6 +9,10 @@ Blog::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+  get '/posts/create' => 'post#new'
+
+  post '/posts/create' => 'post#create'
+
   get '/posts/:post_id' => 'post#show'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
